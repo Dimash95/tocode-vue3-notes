@@ -1,6 +1,16 @@
 <template>
-  <div class="md-body">
-    <h1>hello home</h1>
-    <p>Edit me</p>
-  </div>
+  <FormItem @onSubmit="handleSubmit" />
 </template>
+
+<script>
+import FormItem from '@/components/Notes/FormItem.vue'
+
+export default {
+  components: { FormItem },
+  methods: {
+    handleSubmit(note) {
+      console.log(note)
+    }
+  }
+}
+</script>
